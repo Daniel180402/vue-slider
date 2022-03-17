@@ -1,0 +1,99 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(54, 54, 54);
+}
+
+div.my-carousel-container{
+    min-height: 600px;
+    min-width: 700px ;
+    background-color: rgb(12, 14, 37);
+}
+
+div.my-carousel-images{
+    background-color: rgb(27, 62, 95);
+    min-height: 440px;
+}
+
+div.my-thumbnails{
+    background-color: rgb(12, 14, 37);
+    min-height: 120px;
+}
+
+div.my-previous,
+div.my-next{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, .5);
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+div.my-previous{
+    left: 1rem;
+}
+
+div.my-next{
+    right: 1rem;
+}
+
+div.my-previous > span::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f7fb";
+    line-height: 30px;
+}
+
+div.my-next > span::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f520";
+    line-height: 30px;
+}
+
+.carousel-element{
+    display: none;
+    position: relative;
+}
+
+.active{
+    display: block;
+}
+
+.my-card{
+    width: calc(100% / 5);
+    float: left;
+}
+
+img{
+    width: 70%;
+    height: 60%;
+    padding: 1rem;
+}
+
+.my-card img{
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+}
+
+.item-description{
+    position: absolute;
+    bottom: 2rem;
+    right: 18%;
+    color: white;
+
+    text-align: end;
+}
+
+.thumbnail{
+    filter: brightness(.4);
+}
+
+.thumbnail.active{
+    filter:brightness(1);
+    border: 3px rgb(197, 197, 197) solid;
+}
