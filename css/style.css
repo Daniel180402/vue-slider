@@ -1,22 +1,25 @@
 body{
     font-family: "Montserrat", sans-serif;
-    background-color: rgb(54, 54, 54);
 }
 
 div.my-carousel-container{
-    min-height: 600px;
-    min-width: 700px ;
-    background-color: rgb(12, 14, 37);
+    min-height: 700px;
+    min-width: 800px ;
+    max-width: 1350px;
+    margin: 0 auto;
+    /* background-color: aquamarine; */
 }
 
 div.my-carousel-images{
-    background-color: rgb(27, 62, 95);
-    min-height: 440px;
+    /* background-color: cadetblue; */
+    height: 540px;
+    border: 1px solid;
 }
 
 div.my-thumbnails{
-    background-color: rgb(12, 14, 37);
-    min-height: 120px;
+    /* background-color: violet; */
+    height: 160px;
+    border: 1px solid;
 }
 
 div.my-previous,
@@ -54,46 +57,53 @@ div.my-next > span::after{
     line-height: 30px;
 }
 
-.carousel-element{
+div.my-carousel-item{
     display: none;
-    position: relative;
 }
 
-.active{
+div.my-carousel-item.active{
     display: block;
 }
 
-.my-card{
-    width: calc(100% / 5);
-    float: left;
-}
-
-img{
-    width: 70%;
-    height: 60%;
-    padding: 1rem;
-}
-
-.my-card img{
-    width: 100%;
+div.my-carousel-item{
     height: 100%;
-    padding: .5rem;
+    position: relative;
+    display: none;
 }
 
-.item-description{
-    position: absolute;
-    bottom: 2rem;
-    right: 18%;
-    color: white;
+div.my-carousel-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
+div.item-description{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
     text-align: end;
 }
 
-.thumbnail{
+div#my-carousel .my-thumbnails{
+    flex-basis: 20%;
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+}
+
+div#my-carousel .my-thumbnails .my-thumbnail{
+    height: 160px;
     filter: brightness(.4);
 }
 
-.thumbnail.active{
+div#my-carousel .my-thumbnails .my-thumbnail img{
+    height: 100%;
+    width: 100%;
+}
+
+div#my-carousel .my-thumbnails .my-thumbnail.active{
     filter:brightness(1);
     border: 3px rgb(197, 197, 197) solid;
 }
