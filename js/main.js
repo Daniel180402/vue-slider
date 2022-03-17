@@ -48,6 +48,10 @@ const app = new Vue({
             else{
                 this.activeImage++;
             }
+        },
+
+        selectImage(imageIndex){
+            this.activeImage = imageIndex;
         }
     }
 });

@@ -36,7 +36,7 @@
                                 <span class="my-prev-hook"></span>
                             </div>
 
-                            <div class="my-thumbnail" v-for="(thumbnail, index) in images" :class="(index === activeImage) ? 'active' : ''">
+                            <div class="my-thumbnail" v-for="(thumbnail, index) in images" :class="(index === activeImage) ? 'active' : ''" @click="selectImage(index)">
                                 <img class="img-fluid" :src="thumbnail.url" :alt="thumbnail.title">
                             </div>
 
